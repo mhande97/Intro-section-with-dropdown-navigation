@@ -1,0 +1,254 @@
+/******************************************
+*  Author : Mhande Amalou   
+*  Created On : Sat Jul 16 2022
+*  File : app.sass
+*******************************************/
+$custome_grey:hsl(0, 0%, 41%);
+
+$custome_white:hsl(0, 0%, 98%);
+
+$custome_black :hsl(0, 0%, 8%);
+
+
+
+@font-face {
+    font-family: Epilogue-italic;
+    src: url("../assets/fonts/Epilogue-VariableFont_wght.ttf");
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Epilogue-italic, sans-serif;
+  }
+  
+  .grey {
+    color: $custome_grey;
+  }
+  
+  .white {
+    color: $custome_white;
+  }
+  
+  .black {
+    color: $custome_black;
+  }
+  
+  .cu-bg-white {
+    background-color: $custome_white;
+  }
+  
+  .cu-bg-grey {
+    background-color: $custome_grey;
+  }
+  
+  .cu-bg-black {
+    background-color: $custome_black;
+  }
+  
+  h1 {
+    color: $custome_black;
+  }
+  
+  #wrapper {
+    background-color: $custome_white;
+  }
+  
+  a {
+    color: $custome_grey;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  
+  ul {
+    margin: 0%;
+    padding: 0%;
+    list-style-type: none;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  button {
+    background: none;
+  }
+  
+  #wrapper nav.navbar {
+    width: 100%;
+    max-height: 65px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  
+  a.nav-brand {
+    align-items: center;
+    display: flex;
+  }
+  
+  nav.navbar .brand-and-list {
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+  }
+  
+  nav.navbar .brand-and-list .list-wrapper {
+    width: 60%;
+  }
+  
+  .brand-and-list .list-wrapper .list-group {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+  }
+  
+  li.list-item {
+    margin: 0 15px;
+    padding: 24.5px 0;
+  }
+  
+  a.nav-link {
+    padding: 25px 10px;
+  }
+  
+  li.list-item.has-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  //mixin dropdown-1 && dropdown-2 shared property
+  @mixin dropdown {
+    min-width: 120px;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 15px 0;
+    overflow: hidden;
+    box-shadow: 0 8px 16px #0003;
+  }
+
+  //mixin dropdown-anchor 
+@mixin dropdown-anchor { 
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+
+  ul.dropdown-1 {
+   @include dropdown();
+    max-width: 190px;
+    top: 100%;
+    right: 0%;
+   
+  }
+  ul.dropdown-2 {
+    @include dropdown();
+    max-width: 150px;
+    top: 100%;
+    left: 0%;
+    
+  }
+  
+  li.dropdown-item {
+    overflow: hidden;
+  }
+  
+  ul.dropdown-1 li.dropdown-item a {
+    @include dropdown-anchor();
+    width: 190px;
+    padding: 4px 0 4px 25px;
+    
+  }
+  
+  ul.dropdown-2 li.dropdown-item a {
+    @include dropdown-anchor();
+    width: 135px;
+    padding: 4px 0 4px 35px;
+  
+  }
+  
+  span.link-name {
+    padding-left: 20px;
+  }
+  
+  a.nav-link:hover {
+    color: $custome_black;
+  }
+  
+  li.dropdown-item:hover {
+    background-color: $custome_white;
+  }
+  
+  li#dropdown-1:hover ul.dropdown-1, li#dropdown-2:hover ul.dropdown-2 {
+    display: block;
+  }
+  
+  .icon {
+    width: 25px;
+    height: 25px;
+    background-size: auto;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .icon-todo {
+    background-image: url("../assets/images/icon-todo.svg");
+  }
+  
+  .icon-calender {
+    background-image: url("../assets/images/icon-calendar.svg");
+  }
+  
+  .icon-reminder {
+    background-image: url("../assets/images/icon-reminders.svg");
+  }
+  
+  .icon-plan {
+    background-image: url("../assets/images/icon-planning.svg");
+  }
+  
+  .login-register {
+    margin-right: 35px;
+  }
+  
+  .login-register button {
+    color: $custome_grey;
+    border: 2px solid $custome_grey;
+    border-radius: 15px;
+    padding: 12px 25px;
+    font-weight: 600;
+  }
+  
+  button.login {
+    border: none;
+    margin-right: 10px;
+  }
+  
+  button.register {
+    margin-left: 10px;
+  }
+  
+  .login-register button:hover {
+    color: $custome_black;
+    cursor: pointer;
+  }
+  
+  button.register:hover {
+    border: 2px solid $custome_black;
+  }
+  
+  /*# sourceMappingURL=index.4717fcfd.css.map */
+  
