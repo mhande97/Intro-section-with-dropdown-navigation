@@ -3,252 +3,354 @@
 *  Created On : Sat Jul 16 2022
 *  File : app.sass
 *******************************************/
-$custome_grey:hsl(0, 0%, 41%);
+$custome_grey: hsl(0, 0%, 41%);
 
-$custome_white:hsl(0, 0%, 98%);
+$custome_white: hsl(0, 0%, 98%);
 
-$custome_black :hsl(0, 0%, 8%);
-
-
+$custome_black: hsl(0, 0%, 8%);
 
 @font-face {
-    font-family: Epilogue-italic;
-    src: url("../assets/fonts/Epilogue-VariableFont_wght.ttf");
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Epilogue-italic, sans-serif;
-  }
-  
-  .grey {
-    color: $custome_grey;
-  }
-  
-  .white {
-    color: $custome_white;
-  }
-  
-  .black {
-    color: $custome_black;
-  }
-  
-  .cu-bg-white {
-    background-color: $custome_white;
-  }
-  
-  .cu-bg-grey {
-    background-color: $custome_grey;
-  }
-  
-  .cu-bg-black {
-    background-color: $custome_black;
-  }
-  
-  h1 {
-    color: $custome_black;
-  }
-  
-  #wrapper {
-    background-color: $custome_white;
-  }
-  
-  a {
-    color: $custome_grey;
-    font-size: 15px;
-    text-decoration: none;
-  }
-  
-  ul {
-    margin: 0%;
-    padding: 0%;
-    list-style-type: none;
-  }
-  
-  p {
-    font-size: 18px;
-  }
-  
-  button {
-    background: none;
-  }
-  
-  #wrapper nav.navbar {
-    width: 100%;
-    max-height: 65px;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-  }
-  
-  a.nav-brand {
-    align-items: center;
-    display: flex;
-  }
-  
-  nav.navbar .brand-and-list {
-    width: 50%;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-  }
-  
-  nav.navbar .brand-and-list .list-wrapper {
-    width: 60%;
-  }
-  
-  .brand-and-list .list-wrapper .list-group {
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-  }
-  
-  li.list-item {
-    margin: 0 15px;
-    padding: 24.5px 0;
-  }
-  
-  a.nav-link {
-    padding: 25px 10px;
-  }
-  
-  li.list-item.has-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-  
-  //mixin dropdown-1 && dropdown-2 shared property
-  @mixin dropdown {
-    min-width: 120px;
-    z-index: 1;
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 15px 0;
-    overflow: hidden;
-    box-shadow: 0 8px 16px #0003;
-  }
-
-  //mixin dropdown-anchor 
-@mixin dropdown-anchor { 
-    height: 45px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
+  font-family: Epilogue-italic;
+  src: url("../assets/fonts/Epilogue-VariableFont_wght.ttf");
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  ul.dropdown-1 {
-   @include dropdown();
-    max-width: 190px;
-    top: 100%;
-    right: 0%;
-   
-  }
-  ul.dropdown-2 {
-    @include dropdown();
-    max-width: 150px;
-    top: 100%;
-    left: 0%;
-    
-  }
-  
-  li.dropdown-item {
-    overflow: hidden;
-  }
-  
-  ul.dropdown-1 li.dropdown-item a {
-    @include dropdown-anchor();
-    width: 190px;
-    padding: 4px 0 4px 25px;
-    
-  }
-  
-  ul.dropdown-2 li.dropdown-item a {
-    @include dropdown-anchor();
-    width: 135px;
-    padding: 4px 0 4px 35px;
-  
-  }
-  
-  span.link-name {
-    padding-left: 20px;
-  }
-  
-  a.nav-link:hover {
-    color: $custome_black;
-  }
-  
-  li.dropdown-item:hover {
-    background-color: $custome_white;
-  }
-  
-  li#dropdown-1:hover ul.dropdown-1, li#dropdown-2:hover ul.dropdown-2 {
-    display: block;
-  }
-  
-  .icon {
-    width: 25px;
-    height: 25px;
-    background-size: auto;
-    display: inline-block;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .icon-todo {
-    background-image: url("../assets/images/icon-todo.svg");
-  }
-  
-  .icon-calender {
-    background-image: url("../assets/images/icon-calendar.svg");
-  }
-  
-  .icon-reminder {
-    background-image: url("../assets/images/icon-reminders.svg");
-  }
-  
-  .icon-plan {
-    background-image: url("../assets/images/icon-planning.svg");
-  }
-  
+body {
+  font-family: Epilogue-italic, sans-serif;
+}
+
+.grey {
+  color: $custome_grey;
+}
+
+.white {
+  color: $custome_white;
+}
+
+.black {
+  color: $custome_black;
+}
+
+.cu-bg-white {
+  background-color: $custome_white;
+}
+
+.cu-bg-grey {
+  background-color: $custome_grey;
+}
+
+.cu-bg-black {
+  background-color: $custome_black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $custome_black;
+  margin-bottom: 7px;
+}
+
+header.primary-header {
+  background-color: $custome_white;
+}
+
+a {
+  color: $custome_grey;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0%;
+  padding: 0%;
+  list-style-type: none;
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  background: none;
+}
+.sr-only {
+  display: none;
+}
+.flex {
+  display: flex;
+  // gap: var(--gap,1rem);
+}
+
+//navbar start
+.logo {
+  margin: 1.5rem;
+}
+.primary-header {
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.list-group .list-item a.nav-link {
+  display: block;
+}
+
+/*
+    ==================================
+    media for tablet and mobile screen
+    ==================================
+*/
+
+@media (max-width: 48em) {
+  .primary-navigation,
+  .list-group,
   .login-register {
-    margin-right: 35px;
+    flex-direction: column;
   }
-  
-  .login-register button {
-    color: $custome_grey;
-    border: 2px solid $custome_grey;
-    border-radius: 15px;
-    padding: 12px 25px;
-    font-weight: 600;
+  .primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 10rem;
+    background-color: aqua;
+    padding-inline: 2rem;
+    padding-block-start: 6rem;
+    gap: 1rem;
   }
-  
-  button.login {
+
+  .list-group .list-item a.nav-link {
+    padding-block: 0.5rem;
+  }
+  .login-register {
+    gap: 0.5rem;
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background: transparent center/cover url(../assets/images/icon-menu.svg)
+      no-repeat;
+    top: 2rem;
+    right: 2rem;
+    width: 1.5rem;
+    aspect-ratio: 1;
     border: none;
-    margin-right: 10px;
   }
-  
-  button.register {
-    margin-left: 10px;
+}
+
+/*
+    ===========================
+    media for desktop screen
+    ==========================
+*/
+
+@media (min-width: 48.0625em) {
+  .primary-navigation {
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  .login-register button:hover {
-    color: $custome_black;
-    cursor: pointer;
+
+  .list-group .list-item a.nav-link {
+    padding-block: 2rem;
+    padding-inline: clamp(0.7rem, 1.45vw, 1.5rem);
   }
-  
-  button.register:hover {
-    border: 2px solid $custome_black;
+  .mobile-nav-toggle {
+    display: none;
   }
-  
-  /*# sourceMappingURL=index.4717fcfd.css.map */
-  
+  .login-register {
+    margin-inline-end: 1rem;
+  }
+  .login-register button {
+    padding-inline: 2rem;
+  }
+}
+
+//arrow icon down
+a.nav-link span.arrow-down {
+  display: inline-block;
+  background: center/auto url("../assets/images/icon-arrow-down.svg") no-repeat;
+  min-height: 6px;
+  min-width: 15px;
+}
+//arrow icon up
+a.nav-link span.arrow-up {
+  display: inline-block;
+  background: center/auto url("../assets/images/icon-arrow-up.svg") no-repeat;
+  min-height: 6px;
+  min-width: 15px;
+}
+
+li.list-item.has-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+//mixin dropdown-1 && dropdown-2 shared property
+@mixin dropdown {
+  min-width: 120px;
+  z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 15px 0;
+  overflow: hidden;
+  box-shadow: 0 8px 16px #0003;
+}
+
+//mixin dropdown-anchor
+@mixin dropdown-anchor {
+  height: 45px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+ul.dropdown-1 {
+  @include dropdown();
+  max-width: 190px;
+  top: 100%;
+  right: 0%;
+}
+ul.dropdown-2 {
+  @include dropdown();
+  max-width: 150px;
+  top: 100%;
+  left: 0%;
+}
+
+li.dropdown-item {
+  overflow: hidden;
+}
+
+ul.dropdown-1 li.dropdown-item a {
+  @include dropdown-anchor();
+  width: 190px;
+  padding: 4px 0 4px 25px;
+}
+
+ul.dropdown-2 li.dropdown-item a {
+  @include dropdown-anchor();
+  width: 135px;
+  padding: 4px 0 4px 35px;
+}
+
+span.link-name {
+  padding-left: 20px;
+}
+
+a.nav-link:hover {
+  color: $custome_black;
+}
+
+li.dropdown-item:hover {
+  background-color: $custome_white;
+}
+
+li#dropdown-1:hover ul.dropdown-1,
+li#dropdown-2:hover ul.dropdown-2 {
+  display: block;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  background-size: auto;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon-todo {
+  background-image: url("../assets/images/icon-todo.svg");
+}
+
+.icon-calender {
+  background-image: url("../assets/images/icon-calendar.svg");
+}
+
+.icon-reminder {
+  background-image: url("../assets/images/icon-reminders.svg");
+}
+
+.icon-plan {
+  background-image: url("../assets/images/icon-planning.svg");
+}
+
+.login-register button {
+  color: $custome_grey;
+  border: 2px solid $custome_grey;
+  border-radius: 15px;
+  padding-block: 1rem;
+  font-weight: 600;
+}
+
+button.login {
+  border: none;
+}
+
+.login-register button:hover {
+  color: $custome_black;
+  cursor: pointer;
+}
+
+button.register:hover {
+  border: 2px solid $custome_black;
+}
+
+//start main content
+
+.main-content {
+  padding: 30px 50px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 50px;
+  height: calc(100vh - 65px);
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 50px;
+  }
+}
+
+//sponsors
+
+.sponsors {
+  padding: 10px 0px;
+  margin-top: 30px;
+}
+.sponsors .sponsor {
+  min-width: 115px;
+  min-height: 40px;
+  background-size: auto;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sponsors .sponsor-1 {
+  background-image: url("../assets/images/client-databiz.svg");
+}
+.sponsors .sponsor-2 {
+  background-image: url("../assets/images/client-audiophile.svg");
+}
+.sponsors .sponsor-3 {
+  background-image: url("../assets/images/client-meet.svg");
+}
+.sponsors .sponsor-4 {
+  background-image: url("../assets/images/client-maker.svg");
+}
