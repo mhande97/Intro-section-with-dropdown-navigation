@@ -23,60 +23,96 @@
 </head>
 
 <body>
-    <header class="primary-header flex">
-        <div>
-            <img src="../src/assets/images/logo.svg" alt="" srcset="../src/assets/images/logo.svg" class="logo">
-        </div>
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-            <span class="sr-only">
-                Menu
-            </span>
-        </button>
-        <nav class="primary-navigation flex">
-            <ul class="list-group flex">
-                <li class="list-item has-dropdown" id="dropdown-1">
-                    <a href="#" class="nav-link">Features <span class="arrow-down"></span></a>
-                    <ul class="dropdown-1">
-                        <li class="dropdown-item">
-                            <a href="#"><span class="icon icon-todo"></span> <span class="link-name">Todo
-                                    List</span> </a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a href="#"><span class="icon icon-calender"></span> <span class="link-name">Calender</span>
-                            </a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a href="#"><span class="icon icon-reminder"></span> <span
-                                    class="link-name">Reminders</span> </a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a href="#"><span class="icon icon-plan"></span> <span class="link-name">Planning</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="list-item has-dropdown" id="dropdown-2">
-                    <a href="#" class="nav-link">Company <span class="arrow-down"></span></a>
-                    <ul class="dropdown-2">
-                        <li class="dropdown-item"><a href="#">History</a></li>
-                        <li class="dropdown-item"><a href="#">Our Team</a></li>
-                        <li class="dropdown-item"><a href="#">Blog</a></li>
-                    </ul>
-                </li>
-                <li class="list-item">
-                    <a href="#" class="nav-link">Careers</a>
-                </li>
-                <li class="list-item">
-                    <a href="#" class="nav-link">About</a>
-                </li>
-            </ul>
-            <div class="login-register flex">
-            <button class="login">Login</button>
-            <button class="register">Register</button>
-        </div>
-        </nav>
+    <div class="wrapper">
+        <header class="primary-header flex">
+            <div>
+                <img src="../src/assets/images/logo.svg" alt="" srcset="../src/assets/images/logo.svg" class="logo">
+            </div>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">
+                    Menu
+                </span>
+            </button>
+            <nav class="primary-navigation flex" data-expanded="false">
+                <ul class="list-group flex">
+                    <li class="list-item has-dropdown" id="dropdown-1" aria-expanded="false"
+                        aria-controls="features-dropdown">
+                        <a href="#" class="nav-link">Features <span></span></a>
+                        <ul class="dropdown-1" data-expanded="false">
+                            <li class="dropdown-item">
+                                <a href="#"><span class="icon icon-todo"></span> <span class="link-name">Todo
+                                        List</span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#"><span class="icon icon-calender"></span> <span
+                                        class="link-name">Calender</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#"><span class="icon icon-reminder"></span> <span
+                                        class="link-name">Reminders</span> </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#"><span class="icon icon-plan"></span> <span class="link-name">Planning</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-item has-dropdown" id="dropdown-2" aria-expanded="false"
+                        aria-controls="Company-dropdown">
+                        <a href="#" class="nav-link">Company <span></span></a>
+                        <ul class="dropdown-2" data-expanded="false">
+                            <li class="dropdown-item"><a href="#">History</a></li>
+                            <li class="dropdown-item"><a href="#">Our Team</a></li>
+                            <li class="dropdown-item"><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="nav-link">Careers</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="login-register flex">
+                    <button class="login">Login</button>
+                    <button class="register">Register</button>
+                </div>
+            </nav>
+        </header>
+        <section class="grid primary-section">
+            <article class="article-left flex">
+                
+                <div>
+                <h1 class="article-header">Make <div class="new-line"></div> remote work</h1>
+                <p class="article-paragraph">
+                    Get your team in sync,no matter your location.
+                    Streamline processes,create team rituals,and
+                    watch productivity soar
+                </p>
+                <button class="article-btn">Learn more</button>
+            </div>
+                <div class="article-footer">
+                    <span class="sponsor">
+                        <img src="../src/assets/images/client-databiz.svg" alt="" srcset="../src/assets/images/client-databiz.svg">
+                    </span>
+                    <span class="sponsor"> 
+                        <img src="../src/assets/images/client-audiophile.svg" alt="" srcset="../src/assets/images/client-audiophile.svg">
+                    </span>
+                    <span class="sponsor">
+                        <img src="../src/assets/images/client-meet.svg" alt="" srcset="../src/assets/images/client-meet.svg">
+                    </span>
+                    <span class="sponsor">
+                        <img src="../src/assets/images/client-maker.svg" alt="" srcset="../src/assets/images/client-maker.svg">
+                    </span>
+                </div>
+            </article>
         
-    </header>
+
+            <article class="article-right img-hero">
+            </article>
+        </section>
+    </div>
 
 
 
